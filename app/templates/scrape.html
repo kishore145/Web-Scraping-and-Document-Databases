@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Data</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="container">
+
+    <div class="jumbotron text-center">
+      <h1>Scrape successful.</h1>
+      <p><a class="btn btn-primary btn-lg" href="/" role="button">Return to Home page</a></p>
+      <p>Click Return to Home page button to see updated visualizations</p>
+    </div>
+
+    <!-- Mars News -->
+    <div class="row" id="mars-news">
+      <div class="col-md-12">
+        <div class="media">
+          <div class="media-body">
+            <h2>Scraped Data: </h2>
+            <p>News Title: {{mars.news_title}}</p>
+            <p>News Teaser: {{mars.news_paragraph}}</p>
+            <p>Featured Image URL : {{mars.featured_image}}</p>
+            <p>Hemisphere URLS: {{mars.hemispheres}}</p>
+            <p>Weather Tweet : {{mars.weather}}</p>
+            <p>Last Updated: {{mars.last_modified}}</p>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mars Facts -->
+        <div class="row" id="mars-facts">
+          <div class="col-md-12">
+            <p>Mars Facts</p>
+            {{mars.facts | safe}}
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+
+  </div>
+</body>
+
+</html>
